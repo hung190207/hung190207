@@ -1,41 +1,81 @@
-# Nguyen Ngoc Hung — The Explorer's Archive
+<div align="center">
 
-An English-only fantasy-inspired student developer portfolio for `hung192.dev`.
+# ✦ Nguyen Ngoc Hung
 
-## What's included
+**Student Developer · Web Development · Creative Coding**
 
-- Two featured live projects: **Vietnamguesser** and **Columbina & Aether**, with live demo and source links.
-- A **Skills & Education** section covering Java, JavaScript, C, C++, HTML/CSS, Gradle, Git, HTML Canvas, and algorithmic foundations.
-- An interactive **Code Archive** with nine selected public repositories covering Java, problem solving, algorithms, data structures, and early learning experiments.
-- `cv.html`: a recruiter-focused, print-friendly English resume.
-- Fantasy-inspired original visual styling (not official Genshin Impact or Silver Palace artwork).
+*Turning ideas into interactive experiences, one project at a time.*
 
-The site deliberately does not claim professional work experience, production adoption metrics, awards, or qualifications that have not been verified. JUnit 5 is described only as configured in the Java project.
+[**Portfolio**](https://hung192.dev) · [**Resume**](https://hung192.dev/cv.html) · [**GitHub**](https://github.com/hung190207)
 
-## File structure
+</div>
 
-- `index.html` — portfolio content and repository archive
-- `cv.html` — printable resume
-- `style.css` — site and print styles
-- `script.js` — interest picker, project and repository filters, copy link and scroll effects
-- `assets/astral-observatory.svg` — original vector background
+---
 
-## Deploy
+### ✧ About Me
 
-Replace the existing site source in the GitHub Pages repository that serves `hung192.dev`; preserve its existing `CNAME` file.
+I'm **Nguyen Ngoc Hung**, a second-year student at the **University of Science, Vietnam National University Ho Chi Minh City**.
 
-```bash
-git add .
-git commit -m "Expand portfolio with GitHub projects and CS skills"
-git push origin main
-```
+I enjoy building interactive websites, experimenting with visual effects, and solving programming challenges. My projects bring together an interest in **web development, game mechanics, creative coding, and computer science fundamentals**.
 
-No JavaScript build step required.
+Alongside developing web projects, I'm strengthening my foundation in **Java, data structures, algorithms, and problem solving** through hands-on practice.
 
-## Before applying for jobs
+### ✧ Featured Projects
 
-Add a professional contact email you are comfortable publishing and verify your degree/major and official English university naming. Only claim skills and project contributions you can explain during an interview. Your birth date has intentionally been omitted from the public site and CV.
+#### [Vietnamguesser](https://vietnamguesser.hung192.dev) — Discover Vietnam, One Guess at a Time
 
-## Content scope
+An interactive browser game exploring Vietnamese **cuisine, music, history, and geography** through four daily guessing modes.
 
-The archive includes selected **public** repositories, not private code or a claim that every repository on GitHub has been inspected. Forks, empty repositories and projects without enough public evidence are not used as CV highlights.
+- Built distinct gameplay experiences for image, sound, history, and map-based challenges.
+- Added daily challenges, progressive hints, and bilingual support.
+- Integrated interactive maps using **Leaflet** and **Google Street View**.
+- Designed a responsive interface with light and dark themes.
+
+**[Live website](https://vietnamguesser.hung192.dev)** · **[Source code](https://github.com/hung190207/hung190207.github.io)**
+
+#### [Columbina & Aether](https://c-a.hung192.dev) — Moonlit ASCII Experience
+
+A fantasy-inspired **creative coding** project built with JavaScript and the HTML Canvas API.
+
+- Rendered an animated ASCII-style scene with a moonlit sky, glowing flowers, and shooting stars.
+- Explored point-based character visuals, animation timing, and camera transitions.
+- Deployed the project as a standalone website through GitHub Pages.
+
+**[Live website](https://c-a.hung192.dev)** · **[Source code](https://github.com/hung190207/columbina-aether)**
+
+### ✧ Technologies & Tools
+
+| Area | Technologies & Focus |
+| --- | --- |
+| **Languages** | Java, JavaScript, C, C++, HTML, CSS |
+| **Web & Creative Coding** | HTML Canvas, Responsive Web Design, DOM Manipulation |
+| **Libraries & Tools** | Leaflet, Git, GitHub, GitHub Pages, Gradle |
+| **Computer Science** | Data Structures, Algorithms, Problem Solving |
+
+### ✧ Learning & Practice
+
+I maintain repositories to document my progress and experiment with different approaches to programming:
+
+| Repository | Focus |
+| --- | --- |
+| [Learning_Java](https://github.com/hung190207/Learning_Java) | Java programming and LeetCode practice |
+| [CLRS](https://github.com/hung190207/CLRS) | Algorithm design and analysis exercises |
+| [Learning-data-structure](https://github.com/hung190207/Learning-data-structure) | Data structure and algorithm exercises |
+| [leetcode_by_C](https://github.com/hung190207/leetcode_by_C) | Problem solving using C |
+| [Playground](https://github.com/hung190207/Playground) | Early Java projects and experiments |
+
+### ✧ What I'm Exploring
+
+- Writing clearer, more maintainable code.
+- Improving my algorithmic thinking and software engineering foundations.
+- Creating engaging, accessible, and visually distinctive web experiences.
+
+---
+
+<div align="center">
+
+**Thanks for visiting!**
+
+Explore more of my work at **[hung192.dev](https://hung192.dev)**.
+
+</div>
