@@ -1,6 +1,6 @@
 <div align="center">
 
-# ✦ Nguyen Ngoc Hung
+#  Nguyen Ngoc Hung
 
 **Student Developer · Web Development · Creative Coding**
 
@@ -12,7 +12,7 @@
 
 ---
 
-### ✧ About Me
+###  About Me
 
 I'm **Nguyen Ngoc Hung**, a second-year student at the **University of Science, Vietnam National University Ho Chi Minh City**.
 
@@ -20,7 +20,7 @@ I enjoy building interactive websites, experimenting with visual effects, and so
 
 Alongside developing web projects, I'm strengthening my foundation in **Java, data structures, algorithms, and problem solving** through hands-on practice.
 
-### ✧ Featured Projects
+###  Featured Projects
 
 #### [Vietnamguesser](https://vietnamguesser.hung192.dev) — Discover Vietnam, One Guess at a Time
 
@@ -43,7 +43,7 @@ A fantasy-inspired **creative coding** project built with JavaScript and the HTM
 
 **[Live website](https://c-a.hung192.dev)** · **[Source code](https://github.com/hung190207/columbina-aether)**
 
-### ✧ Technologies & Tools
+###  Technologies & Tools
 
 | Area | Technologies & Focus |
 | --- | --- |
@@ -52,7 +52,7 @@ A fantasy-inspired **creative coding** project built with JavaScript and the HTM
 | **Libraries & Tools** | Leaflet, Git, GitHub, GitHub Pages, Gradle |
 | **Computer Science** | Data Structures, Algorithms, Problem Solving |
 
-### ✧ Learning & Practice
+###  Learning & Practice
 
 I maintain repositories to document my progress and experiment with different approaches to programming:
 
@@ -64,7 +64,7 @@ I maintain repositories to document my progress and experiment with different ap
 | [leetcode_by_C](https://github.com/hung190207/leetcode_by_C) | Problem solving using C |
 | [Playground](https://github.com/hung190207/Playground) | Early Java projects and experiments |
 
-### ✧ What I'm Exploring
+###  What I'm Exploring
 
 - Writing clearer, more maintainable code.
 - Improving my algorithmic thinking and software engineering foundations.
