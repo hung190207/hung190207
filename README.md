@@ -1,33 +1,41 @@
 # Nguyen Ngoc Hung — The Explorer's Archive
 
-English-only fantasy-inspired personal portfolio for `hung192.dev`. The visual design blends a cinematic moonlit landscape with subtle antique-gold Victorian decorations. The print-friendly CV remains professional and restrained.
+An English-only fantasy-inspired student developer portfolio for `hung192.dev`.
 
-The original artwork in this project is not affiliated with or copied from Genshin Impact or Silver Palace.
+## What's included
 
-## Project files
+- Two featured live projects: **Vietnamguesser** and **Columbina & Aether**, with live demo and source links.
+- A **Skills & Education** section covering Java, JavaScript, C, C++, HTML/CSS, Gradle, Git, HTML Canvas, and algorithmic foundations.
+- An interactive **Code Archive** with nine selected public repositories covering Java, problem solving, algorithms, data structures, and early learning experiments.
+- `cv.html`: a recruiter-focused, print-friendly English resume.
+- Fantasy-inspired original visual styling (not official Genshin Impact or Silver Palace artwork).
 
-- `index.html` — homepage and content
-- `cv.html` — print-ready resume
-- `style.css` — responsive styling, light/dark themes and print rules
-- `script.js` — interest selector, project filtering, copy link, transitions
+The site deliberately does not claim professional work experience, production adoption metrics, awards, or qualifications that have not been verified. JUnit 5 is described only as configured in the Java project.
+
+## File structure
+
+- `index.html` — portfolio content and repository archive
+- `cv.html` — printable resume
+- `style.css` — site and print styles
+- `script.js` — interest picker, project and repository filters, copy link and scroll effects
 - `assets/astral-observatory.svg` — original vector background
 
-## Deployment
+## Deploy
 
-Copy the above files to the existing GitHub Pages repository serving `hung192.dev`, preserving its `CNAME` file and DNS setup. There is no build step. Then run:
+Replace the existing site source in the GitHub Pages repository that serves `hung192.dev`; preserve its existing `CNAME` file.
 
-```powershell
+```bash
 git add .
-git commit -m "Redesign portfolio with fantasy-inspired theme"
+git commit -m "Expand portfolio with GitHub projects and CS skills"
 git push origin main
 ```
 
-Your project links stay at `https://vietnamguesser.hung192.dev` and `https://c-a.hung192.dev`.
+No JavaScript build step required.
 
-## Resume details to confirm
+## Before applying for jobs
 
-Before using the CV for applications, verify the school's official English name and your degree or major, and add a professional contact email you are comfortable publishing. The site intentionally omits the full birth date and other unnecessary personal details.
+Add a professional contact email you are comfortable publishing and verify your degree/major and official English university naming. Only claim skills and project contributions you can explain during an interview. Your birth date has intentionally been omitted from the public site and CV.
 
-## Notes
+## Content scope
 
-No external JS framework is required. Navigation and buttons are keyboard accessible, animation respects reduced motion preferences, and the resume is printable on A4. No background music is enabled.
+The archive includes selected **public** repositories, not private code or a claim that every repository on GitHub has been inspected. Forks, empty repositories and projects without enough public evidence are not used as CV highlights.

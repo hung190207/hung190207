@@ -76,6 +76,19 @@
     });
   }));
 
+  // Independently filter the public code archive.
+  document.querySelectorAll('[data-repo-filter]').forEach(button => button.addEventListener('click', () => {
+    const filter = button.dataset.repoFilter;
+    document.querySelectorAll('[data-repo-filter]').forEach(item => {
+      const active = item === button;
+      item.classList.toggle('is-active', active);
+      item.setAttribute('aria-pressed', String(active));
+    });
+    document.querySelectorAll('[data-repo-category]').forEach(card => {
+      card.hidden = filter !== 'all' && card.dataset.repoCategory !== filter;
+    });
+  }));
+
   document.getElementById('copy-portfolio')?.addEventListener('click', async () => {
     const message = document.getElementById('copy-feedback');
     try {

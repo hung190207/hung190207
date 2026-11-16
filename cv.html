@@ -1,24 +1,72 @@
 <!DOCTYPE html>
-
-<html data-theme="light" lang="en">
+<html lang="en" data-theme="light">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="Resume of Nguyen Ngoc Hung — second-year university student and web development enthusiast." name="description"/>
-<title>Nguyen Ngoc Hung — Professional Resume</title>
-<link href="style.css" rel="stylesheet"/>
-<script defer="" src="script.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Resume of Nguyen Ngoc Hung — software engineering student with web projects, Java and algorithmic problem-solving practice.">
+  <title>Nguyen Ngoc Hung — Resume</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body class="cv-page">
-<header class="cv-toolbar"><a class="button button-outline" href="index.html">← Return to portfolio</a><button class="button button-primary" id="print-cv" type="button">Print / Save as PDF ↗</button></header>
-<main class="cv-paper">
-<div class="cv-heading"><div><p class="cv-kicker">STUDENT DEVELOPER  /  SELECTED WORK</p><h1>Nguyen Ngoc Hung</h1><p class="cv-subtitle">Web Development &amp; Creative Coding</p></div><p class="cv-contact"><a href="https://hung192.dev">hung192.dev</a><a href="https://github.com/hung190207">github.com/hung190207</a><span>Vietnam</span></p></div>
-<section class="cv-section"><h2>PROFILE</h2><p>Second-year student at the University of Science with an interest in web development, interactive interfaces, and creative coding. I enjoy turning ideas into usable digital experiences and learning through hands-on projects.</p></section>
-<section class="cv-section"><h2>EDUCATION</h2><div class="cv-row"><div><h3>University of Science</h3><p>Second-year undergraduate student</p></div><span>Current</span></div><p>Developing foundations in programming and software problem-solving through coursework and personal projects.</p></section>
-<section class="cv-section"><h2>SELECTED PROJECTS</h2><div class="cv-project"><div class="cv-row"><h3>Vietnamguesser</h3><a href="https://vietnamguesser.hung192.dev">vietnamguesser.hung192.dev ↗</a></div><p>Interactive web game exploring Vietnamese culture and geography through image, music, history, and map-based guessing modes.</p><p class="cv-keywords">Interactive websites · Game UX</p></div><div class="cv-project"><div class="cv-row"><h3>Columbina &amp; Aether</h3><a href="https://c-a.hung192.dev">c-a.hung192.dev ↗</a></div><p>Animated ASCII artwork made with JavaScript and HTML Canvas, featuring a moonlit environment, glowing flowers, and shooting-star effects.</p><p class="cv-keywords">JavaScript · Canvas API · Animation</p></div></section>
-<section class="cv-section"><h2>TECHNOLOGIES &amp; LEARNING</h2><p>HTML · CSS · JavaScript · HTML Canvas · Java · Git · GitHub</p></section>
-<section class="cv-section cv-last"><h2>INTERESTS</h2><p>Frontend development, user experience, interactive web projects, creative programming, and continuous learning.</p></section>
-</main>
-<p class="cv-footnote">This resume intentionally omits personal contact details that have not been provided. Add a professional email address before applying.</p>
+  <header class="cv-toolbar">
+    <a class="button button-outline" href="index.html">← Return to portfolio</a>
+    <button class="button button-primary" type="button" id="print-cv">Print / Save as PDF ↗</button>
+  </header>
+  <main class="cv-paper">
+    <div class="cv-heading">
+      <div>
+        <p class="cv-kicker">SOFTWARE ENGINEERING STUDENT / SELECTED WORK</p>
+        <h1>Nguyen Ngoc Hung</h1>
+        <p class="cv-subtitle">Web Development · Java · Algorithms</p>
+      </div>
+      <p class="cv-contact">
+        <a href="https://hung192.dev">hung192.dev</a>
+        <a href="https://github.com/hung190207">github.com/hung190207</a>
+        <span>Vietnam</span>
+      </p>
+    </div>
+    <section class="cv-section">
+      <h2>PROFILE</h2>
+      <p>Second-year University of Science student interested in software engineering, web development, and algorithmic problem solving. Develops interactive browser experiences while strengthening programming foundations through Java, C/C++, and structured algorithm practice.</p>
+    </section>
+    <section class="cv-section">
+      <h2>EDUCATION</h2>
+      <div class="cv-row"><div><h3>University of Science, Vietnam National University Ho Chi Minh City</h3><p>Second-year undergraduate student</p></div><span>Current</span></div>
+    </section>
+    <section class="cv-section">
+      <h2>TECHNICAL SKILLS</h2>
+      <div class="cv-skill-lines">
+        <p><strong>Languages:</strong> Java, JavaScript, C, C++, HTML, CSS</p>
+        <p><strong>Web:</strong> Responsive interfaces, DOM, HTML Canvas, Leaflet</p>
+        <p><strong>Tools &amp; CS:</strong> Git, GitHub, GitHub Pages, Gradle, data structures, algorithms; JUnit 5 configuration</p>
+      </div>
+    </section>
+    <section class="cv-section">
+      <h2>SELECTED PROJECTS</h2>
+      <div class="cv-project">
+        <div class="cv-row"><h3>Vietnamguesser — Interactive Web Game</h3><a href="https://vietnamguesser.hung192.dev">Live ↗</a></div>
+        <p class="cv-project-meta">JavaScript · HTML · CSS · Leaflet</p>
+        <ul class="cv-bullets">
+          <li>Built a browser-based guessing game with image, music, history and map-based modes exploring Vietnam.</li>
+          <li>Implemented daily challenges, hint-driven gameplay and a responsive, bilingual interface.</li>
+        </ul>
+      </div>
+      <div class="cv-project">
+        <div class="cv-row"><h3>Columbina &amp; Aether — Animated ASCII Experience</h3><a href="https://c-a.hung192.dev">Live ↗</a></div>
+        <p class="cv-project-meta">JavaScript · HTML Canvas · CSS</p>
+        <ul class="cv-bullets">
+          <li>Created a canvas-based ASCII landscape with layered shooting stars, a moonlit scene, and glowing flowers.</li>
+          <li>Developed procedural animation and published the experience through GitHub Pages.</li>
+        </ul>
+      </div>
+    </section>
+    <section class="cv-section">
+      <h2>ADDITIONAL TECHNICAL PRACTICE</h2>
+      <div class="cv-practice-item"><h3>Java Development &amp; Problem Solving</h3><p>Maintained <a href="https://github.com/hung190207/Learning_Java">Learning_Java</a>, a Java/Gradle learning project featuring LeetCode practice and JUnit Jupiter dependencies.</p></div>
+      <div class="cv-practice-item"><h3>Algorithms &amp; Data Structures</h3><p>Documented exercises and study work in <a href="https://github.com/hung190207/CLRS">CLRS</a>, <a href="https://github.com/hung190207/Learning-data-structure">Learning-data-structure</a>, and <a href="https://github.com/hung190207/leetcode_by_C">leetcode_by_C</a>.</p></div>
+    </section>
+  </main>
+  <p class="cv-footnote">Add a professional contact email and confirm your degree title before sending job applications.</p>
 </body>
 </html>
