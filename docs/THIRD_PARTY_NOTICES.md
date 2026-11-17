@@ -2,7 +2,7 @@
 
 ## Sakuga VFX
 
-The portfolio uses the Sakuga Button, Sakuga Progress, and Sakuga Toggle web components served from a pinned GitHub commit through jsDelivr. Their animation code is **not** included in the ZIP: it is loaded by the browser through the external CDN at runtime. The page provides native-button, theme-switch, and progress-bar fallbacks if the library cannot be loaded.
+The portfolio uses the Sakuga Button, Sakuga Tabs, Sakuga Progress, and Sakuga Toggle web components served from a pinned GitHub commit through jsDelivr. Their animation code is **not** included in the ZIP: it is loaded by the browser through the external CDN at runtime. The page provides native-button, theme-switch, and progress-bar fallbacks if the library cannot be loaded.
 
 - Project: https://github.com/finktheartist/sakuga-vfx
 - Author: Justin Finkelman

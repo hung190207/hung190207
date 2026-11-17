@@ -2,15 +2,15 @@
 
 <html data-theme="light" lang="en">
 <head><script>try{document.documentElement.dataset.theme=localStorage.getItem('portfolio-sakuga-theme')==='dark'?'dark':'light'}catch{}</script>
-<meta charset="utf-8"/>
+<meta charset="utf-8"/><link href="assets/favicon.png" rel="icon" sizes="256x256" type="image/png"/><link href="assets/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#0a1020" name="theme-color"/>
 <meta content="Nguyen Ngoc Hung — software engineering student portfolio featuring interactive web apps, Java practice, algorithms, data structures, and creative coding." name="description"/>
 <meta content="Nguyen Ngoc Hung — Developer Portfolio" property="og:title"/>
 <meta content="Explore Vietnamguesser, Columbina &amp; Aether, and a developer learning journey through Java, algorithms, and data structures." property="og:description"/>
 <title>Nguyen Ngoc Hung — Developer Portfolio &amp; Projects</title>
-<link href="style.css" rel="stylesheet"/>
-<script defer="" src="https://cdn.jsdelivr.net/gh/finktheartist/sakuga-vfx@c3dabb173928a3ad2372183103caf2e6f50953d0/progress/progress.js"></script><script defer="" src="https://cdn.jsdelivr.net/gh/finktheartist/sakuga-vfx@c3dabb173928a3ad2372183103caf2e6f50953d0/button/button.js"></script><script defer="" src="https://cdn.jsdelivr.net/gh/finktheartist/sakuga-vfx@c3dabb173928a3ad2372183103caf2e6f50953d0/toggle/toggle.js"></script><script defer="" src="loading.js"></script><script defer="" src="script.js"></script>
+<link href="css/style.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/gh/finktheartist/sakuga-vfx@c3dabb173928a3ad2372183103caf2e6f50953d0/progress/progress.js"></script><script defer="" src="https://cdn.jsdelivr.net/gh/finktheartist/sakuga-vfx@c3dabb173928a3ad2372183103caf2e6f50953d0/button/button.js"></script><script defer="" src="https://cdn.jsdelivr.net/gh/finktheartist/sakuga-vfx@c3dabb173928a3ad2372183103caf2e6f50953d0/toggle/toggle.js"></script><script defer="" src="https://cdn.jsdelivr.net/gh/finktheartist/sakuga-vfx@c3dabb173928a3ad2372183103caf2e6f50953d0/tabs/tabs.js"></script><script defer="" src="js/loading.js"></script><script defer="" src="js/script.js"></script><script defer="" src="js/interaction-fx.js"></script>
 <style id="critical-loader-css">html,body{margin:0}#page-loader{position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;background:#fbfaff;color:#211951}body.is-preloading{overflow:hidden}body.is-preloading main,body.is-preloading>.site-header,body.is-preloading>.cv-toolbar{visibility:hidden}#page-loader[hidden]{display:none}</style></head>
 <body class="is-preloading">
 <div aria-label="Loading website" aria-live="polite" class="page-loader" id="page-loader" role="status">
@@ -30,9 +30,25 @@
 <header class="site-header" id="top">
 <div class="nav-wrap shell">
 <a aria-label="Nguyen Ngoc Hung — Home" class="brand" href="#top"><span class="brand-mark">✦</span><span class="brand-name">Nguyen Ngoc Hung<span class="brand-suffix"> / THE ARCHIVE</span></span></a>
-<nav aria-label="Primary navigation" class="main-nav"><a href="#about">About</a><a href="#projects">Projects</a><a href="#journey">Skills</a><a href="#repositories">Code Archive</a><a href="#contact">Contact</a></nav>
+<nav aria-label="Primary navigation" class="main-nav">
+<sakuga-tabs id="site-tabs" label="Portfolio sections" selected="0">
+<option value="about">About</option>
+<option value="projects">Projects</option>
+<option value="journey">Skills</option>
+<option value="repositories">Code Archive</option>
+<option value="contact">Contact</option>
+</sakuga-tabs>
+<div class="nav-fallback" id="nav-fallback">
+<span aria-hidden="true" class="nav-fallback-indicator"></span>
+<a class="is-current" href="#about">About</a><a href="#projects">Projects</a>
+<a href="#journey">Skills</a><a href="#repositories">Code Archive</a><a href="#contact">Contact</a>
+</div>
+</nav>
 <div class="nav-tools">
-
+<div aria-label="Appearance" class="theme-control">
+<sakuga-toggle id="theme-toggle" label="Dark mode"></sakuga-toggle>
+<button aria-checked="false" aria-label="Dark mode" hidden="" id="theme-fallback" role="switch" type="button"><span aria-hidden="true"></span></button>
+</div>
 <a class="resume-link" href="cv.html">View CV <span aria-hidden="true">↗</span></a>
 </div>
 </div>
@@ -105,9 +121,6 @@
 </div></section><section aria-labelledby="contact-heading" class="section shell contact-section" id="contact"><div class="contact-card reveal"><div aria-hidden="true" class="contact-shape"></div><p class="eyebrow"><span class="pulse-dot"></span><span>THE FINAL PAGE / FOR NOW</span></p><h2 id="contact-heading">The next chapter awaits.</h2><p>Explore my public code, review my projects, or get in touch about student opportunities and collaborations.</p><div class="contact-actions"><a class="button button-primary" href="https://github.com/hung190207" rel="noopener noreferrer" target="_blank">GitHub <span aria-hidden="true">↗</span></a><button class="button button-outline" id="copy-portfolio" type="button"><span>Copy portfolio link</span> <span aria-hidden="true">⧉</span></button></div><p aria-live="polite" class="copy-feedback" id="copy-feedback" role="status"></p></div></section>
 </main>
 <footer class="site-footer shell"><span>© <span id="year">2026</span> Nguyen Ngoc Hung</span><span>Designed with curiosity. Built with code.</span><a href="#top">Back to top ↑</a></footer>
-<aside aria-label="Appearance settings" class="theme-dock">
-<span class="theme-dock-text"><strong>APPEARANCE</strong><span id="theme-current">Light mode</span></span>
-<sakuga-toggle id="theme-toggle" label="Dark mode"></sakuga-toggle>
-<button aria-checked="false" aria-label="Dark mode" hidden="" id="theme-fallback" role="switch" type="button"><span aria-hidden="true"></span></button>
-</aside></body>
+</body>
 </html>
+

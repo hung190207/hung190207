@@ -3,12 +3,12 @@
 <html data-theme="light" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<link href="assets/favicon.png" rel="icon" sizes="256x256" type="image/png"/><link href="assets/favicon.ico" rel="shortcut icon" type="image/x-icon"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="Resume of Nguyen Ngoc Hung — software engineering student with web projects, Java and algorithmic problem-solving practice." name="description"/>
 <title>Nguyen Ngoc Hung — Resume</title>
-<link href="style.css" rel="stylesheet"/>
-<script defer="" src="https://cdn.jsdelivr.net/gh/finktheartist/sakuga-vfx@c3dabb173928a3ad2372183103caf2e6f50953d0/progress/progress.js"></script><script defer="" src="loading.js"></script><script defer="" src="script.js"></script>
-<style id="critical-loader-css">html,body{margin:0}#page-loader{position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;background:#fbfaff;color:#211951}body.is-preloading{overflow:hidden}body.is-preloading main,body.is-preloading>.site-header,body.is-preloading>.cv-toolbar{visibility:hidden}#page-loader[hidden]{display:none}</style><script defer="" src="cv-motion.js"></script></head>
+<link href="css/style.css" rel="stylesheet"/>
+<script defer="" src="https://cdn.jsdelivr.net/gh/finktheartist/sakuga-vfx@c3dabb173928a3ad2372183103caf2e6f50953d0/progress/progress.js"></script><script defer="" src="js/loading.js"></script>
+<style id="critical-loader-css">html,body{margin:0}#page-loader{position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;background:#fbfaff;color:#211951}body.is-preloading{overflow:hidden}body.is-preloading main,body.is-preloading>.site-header,body.is-preloading>.cv-toolbar{visibility:hidden}#page-loader[hidden]{display:none}</style><script defer="" src="js/cv.js"></script></head>
 <body class="cv-page is-preloading">
 <div aria-label="Loading website" aria-live="polite" class="page-loader" id="page-loader" role="status">
 <div class="loader-window">
@@ -24,22 +24,10 @@
 </div>
 <header class="cv-toolbar">
 <a class="button button-outline" href="index.html">← Return to portfolio</a>
-<button aria-label="Switch to flat view" aria-pressed="true" class="button button-outline" id="explode-cv" type="button">Flat view ↓</button><button class="button button-primary" id="print-cv" type="button">Print / Save as PDF ↗</button>
-</header><p class="cv-tip">Interactive dimensional dossier · Select a layer to inspect it · Flat view restores the print-ready resume.</p>
-<main aria-label="Exploded technical drawing of the resume" class="cv-drawing" hidden="" id="cv-drawing">
-<header class="drawing-titlebar"><div><p class="drawing-overline">PERSONNEL DOSSIER / TECHNICAL DRAWING · PLATE 01</p><h1 id="drawing-title">Nguyen Ngoc Hung <span> / exploded profile</span></h1></div><p class="drawing-titlemeta">8 CONTENT LAYERS<br/>INTERACTIVE AXONOMETRIC VIEW</p></header>
-<div class="drawing-workspace">
-<aside class="drawing-notes"><h2>NOTES</h2><p>01 — All layers contain the original resume information.</p><p>02 — Layers lift from the paper following the drawing sequence.</p><p>03 — Select any layer to inspect it.</p><p>04 — Flat view reconstructs the printable document.</p><p class="drawing-aside-code">ORTHOGRAPHIC REFERENCE / DRW-01</p></aside>
-<div class="drawing-stage" id="drawing-stage">
-<div aria-hidden="true" class="drawing-graticule"></div>
-<div aria-hidden="true" class="drawing-axis"><span>Y</span></div>
-<div aria-live="off" class="drawing-stack" id="drawing-stack"></div>
-</div>
-<aside class="drawing-legend"><h2>LAYER INDEX</h2><ol id="drawing-legend-list"></ol><div class="drawing-meta-box"><strong>PROJECTION</strong><span>AXONOMETRIC</span><strong>CANVAS</strong><span>RESPONSIVE</span><strong>STATE</strong><span id="drawing-state">ASSEMBLING</span></div></aside>
-</div>
-<footer class="drawing-footer"><span>FIGURE A — RESUME ANATOMY</span><span>THE CONTENT IS THE STRUCTURE</span><span>VIEW MODE / 3D</span></footer>
-</main><main aria-label="Flat print-ready resume" class="cv-paper" id="flat-cv">
-<div class="cv-heading dim-line" data-dim-layer="0" style="--layer-index:0;" tabindex="0">
+<button class="button button-primary" id="print-cv" type="button">Print / Save as PDF ↗</button>
+</header>
+<main aria-label="Printable resume" class="cv-paper" id="flat-cv">
+<div class="cv-heading">
 <div>
 <p class="cv-kicker">SOFTWARE ENGINEERING STUDENT / SELECTED WORK</p>
 <h1>Nguyen Ngoc Hung</h1>
@@ -51,47 +39,47 @@
 <span>Vietnam</span>
 </p>
 </div>
-<section class="cv-section" data-dimension-section="" style="--section-index:1;">
+<section class="cv-section">
 <h2>PROFILE</h2>
-<p class="dim-line" data-dim-layer="1" style="--layer-index:1;" tabindex="0">Second-year University of Science student interested in software engineering, web development, and algorithmic problem solving. Develops interactive browser experiences while strengthening programming foundations through Java, C/C++, and structured algorithm practice.</p>
+<p>Second-year University of Science student interested in software engineering, web development, and algorithmic problem solving. Develops interactive browser experiences while strengthening programming foundations through Java, C/C++, and structured algorithm practice.</p>
 </section>
-<section class="cv-section" data-dimension-section="" style="--section-index:2;">
+<section class="cv-section">
 <h2>EDUCATION</h2>
-<div class="cv-row dim-line" data-dim-layer="2" style="--layer-index:2;" tabindex="0"><div><h3>University of Science, Vietnam National University Ho Chi Minh City</h3><p>Second-year undergraduate student</p></div><span>Current</span></div>
+<div class="cv-row"><div><h3>University of Science, Vietnam National University Ho Chi Minh City</h3><p>Second-year undergraduate student</p></div><span>Current</span></div>
 </section>
-<section class="cv-section" data-dimension-section="" style="--section-index:3;">
+<section class="cv-section">
 <h2>TECHNICAL SKILLS</h2>
 <div class="cv-skill-lines">
-<p class="dim-line" data-dim-layer="3" style="--layer-index:3;" tabindex="0"><strong>Languages:</strong> Java, JavaScript, C, C++, HTML, CSS</p>
-<p class="dim-line" data-dim-layer="4" style="--layer-index:4;" tabindex="0"><strong>Web:</strong> Responsive interfaces, DOM, HTML Canvas, Leaflet</p>
-<p class="dim-line" data-dim-layer="5" style="--layer-index:5;" tabindex="0"><strong>Tools &amp; CS:</strong> Git, GitHub, GitHub Pages, Gradle, data structures, algorithms; JUnit 5 configuration</p>
+<p><strong>Languages:</strong> Java, JavaScript, C, C++, HTML, CSS</p>
+<p><strong>Web:</strong> Responsive interfaces, DOM, HTML Canvas, Leaflet</p>
+<p><strong>Tools &amp; CS:</strong> Git, GitHub, GitHub Pages, Gradle, data structures, algorithms; JUnit 5 configuration</p>
 </div>
 </section>
-<section class="cv-section" data-dimension-section="" style="--section-index:4;">
+<section class="cv-section">
 <h2>SELECTED PROJECTS</h2>
 <div class="cv-project">
-<div class="cv-row dim-line" data-dim-layer="6" style="--layer-index:6;" tabindex="0"><h3>Vietnamguesser — Interactive Web Game</h3><a href="https://vietnamguesser.hung192.dev">Live ↗</a></div>
-<p class="cv-project-meta dim-line" data-dim-layer="7" style="--layer-index:7;" tabindex="0">JavaScript · HTML · CSS · Leaflet</p>
+<div class="cv-row"><h3>Vietnamguesser — Interactive Web Game</h3><a href="https://vietnamguesser.hung192.dev">Live ↗</a></div>
+<p class="cv-project-meta">JavaScript · HTML · CSS · Leaflet</p>
 <ul class="cv-bullets">
-<li class="dim-line" data-dim-layer="8" style="--layer-index:8;" tabindex="0">Built a browser-based guessing game with image, music, history and map-based modes exploring Vietnam.</li>
-<li class="dim-line" data-dim-layer="9" style="--layer-index:9;" tabindex="0">Implemented daily challenges, hint-driven gameplay and a responsive, bilingual interface.</li>
+<li>Built a browser-based guessing game with image, music, history and map-based modes exploring Vietnam.</li>
+<li>Implemented daily challenges, hint-driven gameplay and a responsive, bilingual interface.</li>
 </ul>
 </div>
 <div class="cv-project">
-<div class="cv-row dim-line" data-dim-layer="10" style="--layer-index:0;" tabindex="0"><h3>Columbina &amp; Aether — Animated ASCII Experience</h3><a href="https://c-a.hung192.dev">Live ↗</a></div>
-<p class="cv-project-meta dim-line" data-dim-layer="11" style="--layer-index:1;" tabindex="0">JavaScript · HTML Canvas · CSS</p>
+<div class="cv-row"><h3>Columbina &amp; Aether — Animated ASCII Experience</h3><a href="https://c-a.hung192.dev">Live ↗</a></div>
+<p class="cv-project-meta">JavaScript · HTML Canvas · CSS</p>
 <ul class="cv-bullets">
-<li class="dim-line" data-dim-layer="12" style="--layer-index:2;" tabindex="0">Created a canvas-based ASCII landscape with layered shooting stars, a moonlit scene, and glowing flowers.</li>
-<li class="dim-line" data-dim-layer="13" style="--layer-index:3;" tabindex="0">Developed procedural animation and published the experience through GitHub Pages.</li>
+<li>Created a canvas-based ASCII landscape with layered shooting stars, a moonlit scene, and glowing flowers.</li>
+<li>Developed procedural animation and published the experience through GitHub Pages.</li>
 </ul>
 </div>
 </section>
-<section class="cv-section" data-dimension-section="" style="--section-index:5;">
+<section class="cv-section">
 <h2>ADDITIONAL TECHNICAL PRACTICE</h2>
-<div class="cv-practice-item dim-line" data-dim-layer="14" style="--layer-index:4;" tabindex="0"><h3>Java Development &amp; Problem Solving</h3><p>Maintained <a href="https://github.com/hung190207/Learning_Java">Learning_Java</a>, a Java/Gradle learning project featuring LeetCode practice and JUnit Jupiter dependencies.</p></div>
-<div class="cv-practice-item dim-line" data-dim-layer="15" style="--layer-index:5;" tabindex="0"><h3>Algorithms &amp; Data Structures</h3><p>Documented exercises and study work in <a href="https://github.com/hung190207/CLRS">CLRS</a>, <a href="https://github.com/hung190207/Learning-data-structure">Learning-data-structure</a>, and <a href="https://github.com/hung190207/leetcode_by_C">leetcode_by_C</a>.</p></div>
+<div class="cv-practice-item"><h3>Java Development &amp; Problem Solving</h3><p>Maintained <a href="https://github.com/hung190207/Learning_Java">Learning_Java</a>, a Java/Gradle learning project featuring LeetCode practice and JUnit Jupiter dependencies.</p></div>
+<div class="cv-practice-item"><h3>Algorithms &amp; Data Structures</h3><p>Documented exercises and study work in <a href="https://github.com/hung190207/CLRS">CLRS</a>, <a href="https://github.com/hung190207/Learning-data-structure">Learning-data-structure</a>, and <a href="https://github.com/hung190207/leetcode_by_C">leetcode_by_C</a>.</p></div>
 </section>
-<span aria-hidden="true" class="cv-measure top">W = AUTO / RESPONSIVE</span><span aria-hidden="true" class="cv-measure side">SECTION STACK / VARIABLE</span><span aria-hidden="true" class="cv-measure corner"></span></main>
+</main>
 <p class="cv-footnote">Add a professional contact email and confirm your degree title before sending job applications.</p>
 </body>
 </html>

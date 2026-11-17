@@ -2,18 +2,18 @@
   'use strict';
 
   const root = document.documentElement;
-  // Use the real MIT-licensed Sakuga button when the external library loaded.
-  // Standard native buttons are retained as a fully functional fallback.
+  // Convert every action button to the original Sakuga Button when available.
+  // When the external component is unavailable, native buttons stay functional.
   if (customElements.get('sakuga-button')) {
-    document.querySelectorAll('button.focus-chip, button.filter').forEach(button => {
+    document.querySelectorAll('button.focus-chip, button.filter, button#copy-portfolio').forEach(button => {
       const fx = document.createElement('sakuga-button');
       fx.className = button.className;
-      fx.setAttribute('variant', 'secondary');
-      for (const attr of button.attributes) {
+      fx.setAttribute('variant', button.id === 'copy-portfolio' ? 'primary' : 'secondary');
+      for (const attr of [...button.attributes]) {
         if (attr.name === 'class' || attr.name === 'type') continue;
         fx.setAttribute(attr.name, attr.value);
       }
-      fx.textContent = button.textContent;
+      fx.innerHTML = button.innerHTML;
       button.replaceWith(fx);
     });
   }
@@ -165,12 +165,57 @@
     reveal.forEach(item => observer.observe(item));
   } else reveal.forEach(item => item.classList.add('is-visible'));
 
-  const navLinks = [...document.querySelectorAll('.main-nav a[href^="#"]')];
-  if ('IntersectionObserver' in window && navLinks.length) {
-    const navObserver = new IntersectionObserver(entries => entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      navLinks.forEach(link => link.classList.toggle('is-current', link.getAttribute('href') === `#${entry.target.id}`));
-    }), {rootMargin:'-20% 0px -67% 0px'});
+  // Genuine Sakuga Tabs handle navigation and keyboard interaction when loaded.
+  // Native anchor navigation is available without the external component.
+  const tabBar = document.getElementById('site-tabs');
+  const fallbackNav = document.getElementById('nav-fallback');
+  const navLinks = [...document.querySelectorAll('.nav-fallback a[href^="#"]')];
+  const tabIds = ['about', 'projects', 'journey', 'repositories', 'contact'];
+  let manualTabUntil = 0;
+
+  function alignFallbackIndicator() {
+    if (!fallbackNav || !navLinks.length) return;
+    const active = fallbackNav.querySelector('a.is-current') || navLinks[0];
+    const indicator = fallbackNav.querySelector('.nav-fallback-indicator');
+    if (!indicator || !active) return;
+    indicator.style.left = `${active.offsetLeft}px`;
+    indicator.style.width = `${active.offsetWidth}px`;
+  }
+
+  function activateNav(id, {quiet = true} = {}) {
+    navLinks.forEach(link => link.classList.toggle('is-current', link.hash === `#${id}`));
+    alignFallbackIndicator();
+    if (tabBar && customElements.get('sakuga-tabs')) {
+      const index = tabIds.indexOf(id);
+      if (index >= 0 && tabBar.selected !== index && quiet) tabBar.selected = index;
+    }
+  }
+
+  tabBar?.addEventListener('change', event => {
+    const id = event.detail?.value;
+    const section = id && document.getElementById(id);
+    if (!section) return;
+    manualTabUntil = Date.now() + 1050;
+    activateNav(id, {quiet:false});
+    section.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth',block:'start'});
+    history.replaceState(null, '', `#${id}`);
+  });
+
+  navLinks.forEach(link => link.addEventListener('click', () => {
+    manualTabUntil = Date.now() + 900;
+    activateNav(link.hash.substring(1));
+  }));
+
+  if ('ResizeObserver' in window && fallbackNav) new ResizeObserver(alignFallbackIndicator).observe(fallbackNav);
+  window.addEventListener('resize', alignFallbackIndicator);
+  activateNav(tabIds.includes(location.hash.slice(1)) ? location.hash.slice(1) : 'about');
+
+  if ('IntersectionObserver' in window) {
+    const navObserver = new IntersectionObserver(entries => {
+      if (Date.now() < manualTabUntil) return;
+      const visible = entries.filter(e=>e.isIntersecting);
+      if (visible.length) activateNav(visible.at(-1).target.id);
+    }, {rootMargin:'-18% 0px -62% 0px'});
     document.querySelectorAll('main section[id]').forEach(section => navObserver.observe(section));
   }
   const spotlight = document.getElementById('spotlight');
