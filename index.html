@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
-<html data-theme="dark" lang="en">
-<head>
+<html data-theme="light" lang="en">
+<head><script>try{document.documentElement.dataset.theme=localStorage.getItem('portfolio-sakuga-theme')==='dark'?'dark':'light'}catch{}</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#0a1020" name="theme-color"/>
@@ -10,9 +10,21 @@
 <meta content="Explore Vietnamguesser, Columbina &amp; Aether, and a developer learning journey through Java, algorithms, and data structures." property="og:description"/>
 <title>Nguyen Ngoc Hung — Developer Portfolio &amp; Projects</title>
 <link href="style.css" rel="stylesheet"/>
-<script defer="" src="script.js"></script>
-</head>
-<body>
+<script defer="" src="https://cdn.jsdelivr.net/gh/finktheartist/sakuga-vfx@c3dabb173928a3ad2372183103caf2e6f50953d0/progress/progress.js"></script><script defer="" src="https://cdn.jsdelivr.net/gh/finktheartist/sakuga-vfx@c3dabb173928a3ad2372183103caf2e6f50953d0/button/button.js"></script><script defer="" src="https://cdn.jsdelivr.net/gh/finktheartist/sakuga-vfx@c3dabb173928a3ad2372183103caf2e6f50953d0/toggle/toggle.js"></script><script defer="" src="loading.js"></script><script defer="" src="script.js"></script>
+<style id="critical-loader-css">html,body{margin:0}#page-loader{position:fixed;inset:0;z-index:2000;display:flex;align-items:center;justify-content:center;background:#fbfaff;color:#211951}body.is-preloading{overflow:hidden}body.is-preloading main,body.is-preloading>.site-header,body.is-preloading>.cv-toolbar{visibility:hidden}#page-loader[hidden]{display:none}</style></head>
+<body class="is-preloading">
+<div aria-label="Loading website" aria-live="polite" class="page-loader" id="page-loader" role="status">
+<div class="loader-window">
+<div aria-hidden="true" class="loader-sigil">✦</div>
+<h2 class="loader-title">Loading the Archive</h2>
+<p class="loader-sub">Preparing your interactive experience</p>
+<div class="loader-visual">
+<sakuga-progress id="sakuga-loader" label="Website loading progress" value="0"></sakuga-progress>
+<div aria-hidden="true" class="loader-fallback" id="loader-fallback"><div class="loader-fallback-track"><div class="loader-fallback-fill" id="loader-fallback-fill"></div></div><span class="loader-fallback-number" id="loader-fallback-number">0%</span></div>
+</div>
+<p class="loader-stage" id="loader-stage">Loading assets</p>
+</div>
+</div>
 <div aria-hidden="true" class="reading-progress" id="reading-progress"></div>
 <div aria-hidden="true" class="spotlight" id="spotlight"></div>
 <header class="site-header" id="top">
@@ -20,7 +32,7 @@
 <a aria-label="Nguyen Ngoc Hung — Home" class="brand" href="#top"><span class="brand-mark">✦</span><span class="brand-name">Nguyen Ngoc Hung<span class="brand-suffix"> / THE ARCHIVE</span></span></a>
 <nav aria-label="Primary navigation" class="main-nav"><a href="#about">About</a><a href="#projects">Projects</a><a href="#journey">Skills</a><a href="#repositories">Code Archive</a><a href="#contact">Contact</a></nav>
 <div class="nav-tools">
-<button aria-label="Switch color theme" class="utility-btn theme-btn" id="theme-toggle" type="button"><svg aria-hidden="true" fill="none" height="19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="19"><path d="M20 15.4A8.5 8.5 0 0 1 8.6 4 8.5 8.5 0 1 0 20 15.4Z"></path></svg></button>
+
 <a class="resume-link" href="cv.html">View CV <span aria-hidden="true">↗</span></a>
 </div>
 </div>
@@ -93,5 +105,9 @@
 </div></section><section aria-labelledby="contact-heading" class="section shell contact-section" id="contact"><div class="contact-card reveal"><div aria-hidden="true" class="contact-shape"></div><p class="eyebrow"><span class="pulse-dot"></span><span>THE FINAL PAGE / FOR NOW</span></p><h2 id="contact-heading">The next chapter awaits.</h2><p>Explore my public code, review my projects, or get in touch about student opportunities and collaborations.</p><div class="contact-actions"><a class="button button-primary" href="https://github.com/hung190207" rel="noopener noreferrer" target="_blank">GitHub <span aria-hidden="true">↗</span></a><button class="button button-outline" id="copy-portfolio" type="button"><span>Copy portfolio link</span> <span aria-hidden="true">⧉</span></button></div><p aria-live="polite" class="copy-feedback" id="copy-feedback" role="status"></p></div></section>
 </main>
 <footer class="site-footer shell"><span>© <span id="year">2026</span> Nguyen Ngoc Hung</span><span>Designed with curiosity. Built with code.</span><a href="#top">Back to top ↑</a></footer>
-</body>
+<aside aria-label="Appearance settings" class="theme-dock">
+<span class="theme-dock-text"><strong>APPEARANCE</strong><span id="theme-current">Light mode</span></span>
+<sakuga-toggle id="theme-toggle" label="Dark mode"></sakuga-toggle>
+<button aria-checked="false" aria-label="Dark mode" hidden="" id="theme-fallback" role="switch" type="button"><span aria-hidden="true"></span></button>
+</aside></body>
 </html>

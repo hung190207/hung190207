@@ -2,6 +2,22 @@
   'use strict';
 
   const root = document.documentElement;
+  // Use the real MIT-licensed Sakuga button when the external library loaded.
+  // Standard native buttons are retained as a fully functional fallback.
+  if (customElements.get('sakuga-button')) {
+    document.querySelectorAll('button.focus-chip, button.filter').forEach(button => {
+      const fx = document.createElement('sakuga-button');
+      fx.className = button.className;
+      fx.setAttribute('variant', 'secondary');
+      for (const attr of button.attributes) {
+        if (attr.name === 'class' || attr.name === 'type') continue;
+        fx.setAttribute(attr.name, attr.value);
+      }
+      fx.textContent = button.textContent;
+      button.replaceWith(fx);
+    });
+  }
+  document.querySelectorAll('.button, .resume-link, .project-visit, .repo-card a').forEach(link => link.classList.add('impact-anim'));
   const getStored = (key, fallback) => {
     try { return localStorage.getItem(key) || fallback; } catch { return fallback; }
   };
@@ -46,21 +62,46 @@
     updateFocus();
   }));
 
-  let theme = getStored('portfolio-theme', document.body.classList.contains('cv-page') ? 'light' : 'dark');
-  function applyTheme() {
+  // Theme state is controlled by Sakuga VFX's real 43-frame animated toggle.
+  // A native switch remains available when the external component is unavailable.
+  const sakugaThemeToggle = document.getElementById('theme-toggle');
+  const nativeThemeToggle = document.getElementById('theme-fallback');
+  const themeText = document.getElementById('theme-current');
+  let theme = getStored('portfolio-sakuga-theme', 'light') === 'dark' ? 'dark' : 'light';
+  const sakugaAvailable = !!customElements.get('sakuga-toggle');
+
+  if (sakugaThemeToggle && !sakugaAvailable) sakugaThemeToggle.hidden = true;
+  if (nativeThemeToggle) nativeThemeToggle.hidden = sakugaAvailable;
+
+  function applyTheme(syncSwitch = true) {
     root.dataset.theme = theme;
-    const button = document.getElementById('theme-toggle');
-    if (button) {
-      button.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
-      button.innerHTML = theme === 'dark'
-        ? '<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 15.4A8.5 8.5 0 0 1 8.6 4 8.5 8.5 0 1 0 20 15.4Z"/></svg>'
-        : '<svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
+    const dark = theme === 'dark';
+    if (themeText) themeText.textContent = dark ? 'Dark mode' : 'Light mode';
+    if (sakugaThemeToggle && sakugaAvailable) {
+      if (syncSwitch && sakugaThemeToggle.checked !== dark) sakugaThemeToggle.checked = dark;
+      sakugaThemeToggle.setAttribute('label', 'Dark mode');
+    }
+    if (nativeThemeToggle) {
+      nativeThemeToggle.setAttribute('aria-checked', String(dark));
+      nativeThemeToggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
     }
   }
-  document.getElementById('theme-toggle')?.addEventListener('click', () => {
+
+  sakugaThemeToggle?.addEventListener('change', () => {
+    theme = sakugaThemeToggle.checked ? 'dark' : 'light';
+    setStored('portfolio-sakuga-theme', theme);
+    applyTheme(false); // Do not restart the genuine Sakuga toggle animation.
+  });
+  nativeThemeToggle?.addEventListener('click', () => {
     theme = theme === 'dark' ? 'light' : 'dark';
-    setStored('portfolio-theme', theme);
+    setStored('portfolio-sakuga-theme', theme);
     applyTheme();
+  });
+  window.addEventListener('storage', event => {
+    if (event.key === 'portfolio-sakuga-theme') {
+      theme = event.newValue === 'dark' ? 'dark' : 'light';
+      applyTheme();
+    }
   });
   applyTheme();
 
