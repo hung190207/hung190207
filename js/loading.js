@@ -1,4 +1,4 @@
-/* Genuine resource-gated progress; no simulated percentage. */
+/* Loading screen with progress bar and percentage indicator.*/
 (() => {
   'use strict';
   const loader = document.getElementById('page-loader');
@@ -46,7 +46,6 @@
     loader.setAttribute('aria-label', `Loading website: ${percent}%`);
   }
   update(0);
-  // Every completed unit represents an actual completed document or resource.
   Promise.all(tasks.map(async ([name, run]) => {
     try { await run(); }
     catch (error) { console.warn('Optional resource did not load:',name,error); }
@@ -56,12 +55,11 @@
       update(finished / tasks.length);
     }
   })).then(() => {
-    // Allow the real Sakuga progress component to draw its finishing impact.
     const animationFinished = new Promise(resolve => {
       if (!hasSakuga || !progress) return resolve();
       if (progress.done) return resolve();
       progress.addEventListener('sakuga:done', resolve, {once:true});
-      setTimeout(resolve, 1350); // Animation safeguard, not a fake loading percentage.
+      setTimeout(resolve, 1350);
     });
     return animationFinished;
   }).then(() => {

@@ -1,9 +1,9 @@
+// Main script for portfolio website. Handles theme toggling, focus filtering, copy-to-clipboard, and other interactive features.
+
 (() => {
   'use strict';
 
   const root = document.documentElement;
-  // Convert every action button to the original Sakuga Button when available.
-  // When the external component is unavailable, native buttons stay functional.
   if (customElements.get('sakuga-button')) {
     document.querySelectorAll('button.focus-chip, button.filter, button#copy-portfolio').forEach(button => {
       const fx = document.createElement('sakuga-button');
@@ -62,8 +62,6 @@
     updateFocus();
   }));
 
-  // Theme state is controlled by Sakuga VFX's real 43-frame animated toggle.
-  // A native switch remains available when the external component is unavailable.
   const sakugaThemeToggle = document.getElementById('theme-toggle');
   const nativeThemeToggle = document.getElementById('theme-fallback');
   const themeText = document.getElementById('theme-current');
@@ -90,7 +88,7 @@
   sakugaThemeToggle?.addEventListener('change', () => {
     theme = sakugaThemeToggle.checked ? 'dark' : 'light';
     setStored('portfolio-sakuga-theme', theme);
-    applyTheme(false); // Do not restart the genuine Sakuga toggle animation.
+    applyTheme(false);
   });
   nativeThemeToggle?.addEventListener('click', () => {
     theme = theme === 'dark' ? 'light' : 'dark';
@@ -117,7 +115,6 @@
     });
   }));
 
-  // Independently filter the public code archive.
   document.querySelectorAll('[data-repo-filter]').forEach(button => button.addEventListener('click', () => {
     const filter = button.dataset.repoFilter;
     document.querySelectorAll('[data-repo-filter]').forEach(item => {
@@ -165,8 +162,6 @@
     reveal.forEach(item => observer.observe(item));
   } else reveal.forEach(item => item.classList.add('is-visible'));
 
-  // Genuine Sakuga Tabs handle navigation and keyboard interaction when loaded.
-  // Native anchor navigation is available without the external component.
   const tabBar = document.getElementById('site-tabs');
   const fallbackNav = document.getElementById('nav-fallback');
   const navLinks = [...document.querySelectorAll('.nav-fallback a[href^="#"]')];

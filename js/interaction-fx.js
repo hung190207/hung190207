@@ -1,5 +1,5 @@
-/* Responsive impact effects for native links/buttons if Sakuga components are unavailable.
-   Native click behavior, keyboard interaction and anchor semantics are preserved. */
+// Interaction effects for buttons and links. Adds visual feedback on click events, including a punch animation and particle effects.
+
 (() => {
   'use strict';
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
